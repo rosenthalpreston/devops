@@ -35,9 +35,9 @@ echo "Nom du sous-réseau : $subnetName"
 echo "Préfixe du sous-réseau : $subnetPrefix"
 
 # Création d'un fichier texte récapitulatif des informations de déploiement
-echo "Le VPC a été déployé avec succès !" > deployment_info.txt
-echo "Nom du groupe de ressources : $resourceGroupName" >> deployment_info.txt
-echo "Emplacement : $location" >> deployment_info.txt
-echo "Nom du réseau virtuel : $vnetName" >> deployment_info.txt
-echo "Nom du sous-réseau : $subnetName" >> deployment_info.txt
-echo "Préfixe du sous-réseau : $subnetPrefix" >> deployment_info.txt
+echo "Le VPC a été déployé avec succès !" > deployment_info_azure.txt
+echo "Nom du groupe de ressources : $resourceGroupName" >> deployment_info_azure.txt
+echo "Emplacement : $location" >> deployment_info_azure.txt
+echo "Nom du réseau virtuel : $vnetName" >> deployment_info_azure.txt
+echo "Nom du sous-réseau : $subnetName" >> deployment_info_azure.txt
+echo "Préfixe du sous-réseau : $subnetPrefix" >> deployment_info_azure.txt
