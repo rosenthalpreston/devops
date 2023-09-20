@@ -1,8 +1,4 @@
-
-
-
 # Se mettre en root voir créer un mot de passe root pour les nouvelles installations
-su
 apt install && apt update -y
 
 #Prerequisites
@@ -12,7 +8,6 @@ apt-get install -y autoconf gcc libc6 make wget unzip apache2 apache2-utils php 
 apt-get install openssl libssl-dev
  
     #Téléchargement de la source
-su
 cd /tmp
 wget -O nagioscore.tar.gz https://github.com/NagiosEnterprises/nagioscore/archive/nagios-4.4.14.tar.gz
 tar xzf nagioscore.tar.gz
