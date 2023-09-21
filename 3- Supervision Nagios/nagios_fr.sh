@@ -52,3 +52,21 @@ cd /tmp/nagios-plugins-release-2.4.6/
 ./configure
 make
 sudo make install
+
+# Prérequis installation NRPE
+# Assurez-vous d'avoir les packages suivants installés.
+
+apt-get update
+apt-get install -y autoconf automake gcc libc6 libmcrypt-dev make libssl-dev wget
+
+# Téléchargement de la source
+cd /tmp
+wget --no-check-certificate -O nrpe.tar.gz https://github.com/NagiosEnterprises/nrpe/archive/nrpe-4.1.0.tar.gz
+tar xzf nrpe.tar.gz
+
+# Compilation
+# Notez que si vous souhaitez transmettre des arguments via NRPE, vous devez le spécifier dans l'option de configuration comme indiqué ci-dessous. Si vous préférez, vous pouvez omettre le drapeau --enable-command-args. En supprimant ce drapeau, il sera nécessaire de définir explicitement tous les arguments dans le fichier nrpe.cfg de chaque serveur surveillé.
+
+cd /tmp/nrpe-nrpe-4.1.0/
+./configure --enable-command-args
+make all
